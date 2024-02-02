@@ -17,6 +17,10 @@ code {
   text-align: right;
 }
 
+.ui .buttons{
+  direction: ltr !important;
+}
+
 
 @font-face {
   font-family: 'iransans';
