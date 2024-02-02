@@ -1,3 +1,7 @@
+# Project Info
+## UI Framework React semantic ui [site](https://react.semantic-ui.com)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
