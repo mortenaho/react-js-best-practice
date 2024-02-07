@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Grid, GridColumn, GridRow, Segment } from 'semantic-ui-react';
 import GetProducts from '../../services/product-service';
 import Prodoct from '../../components/product';
+import IProduct from '../../Interfaces/iproduct';
+ 
 
 function Home() {
-    const [products, setProducts] = useState([]);
+    const [products, setProducts] = useState<IProduct[]>([]);
     useEffect(() => {
         GetProducts().then(response => {
             console.log(response.data)
@@ -17,7 +19,7 @@ function Home() {
             <GridRow  >
                 {products != null && products.map((prodcut, index) => {
                     return (<GridColumn  className='mb-10'  tablet={6} computer={4} mobile={12}>
-                            <Prodoct data={prodcut} />
+                            <Prodoct data={prodcut}/>
                     </GridColumn>)
                 })}
             </GridRow>

@@ -8,11 +8,14 @@ import {
     Icon,
     Image,
 } from 'semantic-ui-react'
+ import './product.css'
+ 
+import IProduct from '../Interfaces/iproduct'
 
-function Prodoct ({data}){
+ function Prodoct({data}:{data:IProduct}){
     return (
         <Card fluid key={data.productId}>
-            <Image src={data.imageUrl} wrapped ui={false} />
+            <Image  className='product-image' size='medium' rounded src={data.imageUrl} wrapped ui={false} />
             <CardContent>
                 <CardHeader>{data.productName}</CardHeader>
                 <CardMeta>Joined in 2016</CardMeta>
