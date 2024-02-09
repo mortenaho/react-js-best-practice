@@ -7,7 +7,7 @@ import LoginService from "../../services/login-service";
 
 export default function Login() {
    const [loginloading, setLoginloading] = useState(false);
-   function loginFormHandleSubmit(e) {
+   function loginFormHandleSubmit(e:any) {
       // Prevent the browser from reloading the page
       e.preventDefault();
       // Read the form data

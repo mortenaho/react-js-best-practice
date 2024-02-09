@@ -7,15 +7,18 @@ import {
     Card,
     Icon,
     Image,
+    Button,
 } from 'semantic-ui-react'
- import './product.css'
- 
-import IProduct from '../Interfaces/iproduct'
 
- function Prodoct({data}:{data:IProduct}){
+import './product.css'
+
+import IProduct from '../Interfaces/iproduct'
+ 
+import { PatternFormat } from 'react-number-format';
+function Prodoct({ data }: { data: IProduct }) {
     return (
         <Card fluid key={data.productId}>
-            <Image  className='product-image' size='medium' rounded src={data.imageUrl} wrapped ui={false} />
+            <Image className='product-image' size='medium' rounded src={data.imageUrl} wrapped ui={false} />
             <CardContent>
                 <CardHeader>{data.productName}</CardHeader>
                 <CardMeta>Joined in 2016</CardMeta>
@@ -24,10 +27,9 @@ import IProduct from '../Interfaces/iproduct'
                 </CardDescription>
             </CardContent>
             <CardContent extra>
-                <a>
-                    <Icon name='user' />
-                    10 Friends
-                </a>
+                <Button primary>
+                    <PatternFormat value={data.price.toString()} format="###,###" />;   تومان
+                </Button>
             </CardContent>
         </Card>
     )

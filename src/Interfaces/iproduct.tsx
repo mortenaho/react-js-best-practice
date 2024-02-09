@@ -4,5 +4,6 @@ interface IProduct {
      price:bigint;
      imageUrl:string;
      description:string;
+
 }
 export default IProduct
